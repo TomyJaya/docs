@@ -584,6 +584,12 @@
                 ]
               },
               {
+                "title": "<code>ALTER RANGE</code>",
+                "urls": [
+                  "/${VERSION}/alter-range.html"
+                ]
+              },
+              {
                 "title": "<code>ALTER SEQUENCE</code>",
                 "urls": [
                   "/${VERSION}/alter-sequence.html"
@@ -653,6 +659,12 @@
                 "title": "<code>COMMIT</code>",
                 "urls": [
                   "/${VERSION}/commit-transaction.html"
+                ]
+              },
+              {
+                "title": "<code>CONFIGURE ZONE</code>",
+                "urls": [
+                  "/${VERSION}/configure-zone.html"
                 ]
               },
               {
@@ -1031,6 +1043,12 @@
                 "title": "<code>SHOW USERS</code>",
                 "urls": [
                   "/${VERSION}/show-users.html"
+                ]
+              },
+              {
+                "title": "<code>SHOW ZONE CONFIGURATIONS</code>",
+                "urls": [
+                  "/${VERSION}/show-zone-configurations.html"
                 ]
               },
               {
