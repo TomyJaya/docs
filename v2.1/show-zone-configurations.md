@@ -41,7 +41,7 @@ Parameter | Description
 
 ## See also
 
-- [Configure Replcation Zones](configure-replication-zones.html)
+- [Configure Replication Zones](configure-replication-zones.html)
 - [`CONFIGURE ZONE`](configure-zone.html)
 - [`ALTER DATABASE`](alter-database.html)
 - [`ALTER INDEX`](alter-index.html)
