@@ -1,10 +1,10 @@
 ---
 title: SHOW ZONE CONFIGURATIONS
-summary: The SHOW ZONE CONFIGURATIONS statement
+summary: Use the SHOW ZONE CONFIGURATIONS statement to list details about existing replication zones.
 toc: true
 ---
 
-<span class="version-tag">New in v2.1:</span> The `SHOW ZONE CONFIGURATIONS` [statement](sql-statements.html) lists details about [replication zones](configure-replication-zones).
+<span class="version-tag">New in v2.1:</span> Use the `SHOW ZONE CONFIGURATIONS` [statement](sql-statements.html) to list details about existing [replication zones](configure-replication-zones).
 
 ## Synopsis
 

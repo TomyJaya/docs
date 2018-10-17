@@ -1,10 +1,10 @@
 ---
 title: CONFIGURE ZONE
-summary: Use the CONFIGURE ZONE statement to control the number and location of replicas for specific sets of data.
+summary: Use the CONFIGURE ZONE statement to add, modify, reset, and remove replication zones.
 toc: true
 ---
 
-<span class="version-tag">New in v2.1:</span> Use `CONFIGURE ZONE` to [configure replication zones](configure-replication-zones.html).
+<span class="version-tag">New in v2.1:</span> Use `CONFIGURE ZONE` to add, modify, reset, and remove [replication zones](configure-replication-zones.html).
 
 In CockroachDB, you can use **replication zones** to control the number and location of replicas for specific sets of data, both when replicas are first added and when they are rebalanced to maintain cluster equilibrium.
 
