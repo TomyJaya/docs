@@ -127,10 +127,9 @@ $ cockroach sql --insecure --port=26259
 +--------------------+
 |      Database      |
 +--------------------+
-| bank               |
 | system             |
 +--------------------+
-(2 rows)
+(1 row)
 ~~~
 
 As you see, despite one node being offline, the cluster continues uninterrupted because a majority of replicas (2/3) remains available. If you were to remove another node, however, leaving only one node live, the cluster would be unresponsive until another node was brought back online.
