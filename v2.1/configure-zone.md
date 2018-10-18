@@ -10,17 +10,25 @@ In CockroachDB, you can use **replication zones** to control the number and loca
 
 ## Synopsis
 
+**alter_zone_database_stmt ::=**
+
 <div>
   {% include {{ page.version.version }}/sql/diagrams/alter_zone_database.html %}
 </div>
+
+**alter_zone_range_stmt ::=**
+
+<div>
+  {% include {{ page.version.version }}/sql/diagrams/alter_zone_range.html %}
+</div>
+
+**alter_zone_index_stmt ::=**
 
 <div>
   {% include {{ page.version.version }}/sql/diagrams/alter_zone_index.html %}
 </div>
 
-<div>
-  {% include {{ page.version.version }}/sql/diagrams/alter_zone_range.html %}
-</div>
+**alter_zone_table_stmt ::=**
 
 <div>
   {% include {{ page.version.version }}/sql/diagrams/alter_zone_table.html %}
@@ -35,17 +43,18 @@ Currently, only the `root` user can configure replication zones.
 
  Parameter | Description
 -----------+-------------
-`name` | The name of the database, table, index, or range with the zone configuration you want to change.
-`var_name` | The name of the constraint you want to change. For more information, see
-`var_value` | The value of the constraint you want to change. For more information, see
+`range_name` | The name of the system [range](architecture/overview.html#glossary) for which to show [replication zone configurations](configure-replication-zones).
+`database_name` | The name of the [database](create-database.html) for which to show [replication zone configurations](configure-replication-zones).
+`table_name` | The name of the [table](create-table.html) for which to show [replication zone configurations](configure-replication-zones).
+`partition_name` | The name of the [partition](partitioning.html) for which to show [replication zone configurations](configure-replication-zones).
+`index_name` | The name of the [index](indexes.html) for which to show [replication zone configurations](configure-replication-zones).
+`variable` | The name of the [variable](#variables) to change.
+`value` | The value of the variable to change.
 `DISCARD` | Remove a zone configuration.
-`DEFAULT` | Resets a zone configuration to inherited defaults.
 
 ### Variables
 
-
-
-
+{% include v2.1/zone-configs/variables.md %}
 
 ## Examples
 
@@ -53,17 +62,13 @@ Currently, only the `root` user can configure replication zones.
 
 {% include copy-clipboard.html %}
 ~~~ sql
->
+> ALTER TABLE t CONFIGURE ZONE USING range_min_bytes = 0, range_max_bytes = 90000, gc.ttlseconds = 89999, num_replicas = 4, constraints = '[-region=west]';
 ~~~
-
-~~~
-
-~~~
-
-### Edit a zone configuration with compact constraint syntax
 
 
 ### Reset a zone configuration
+
+DEFAULT
 
 ### Remove a zone configuration
 
