@@ -10,22 +10,16 @@ In CockroachDB, you can use **replication zones** to control the number and loca
 
 ## Synopsis
 
-**alter_zone_database_stmt ::=**
-
-<div>
-  {% include {{ page.version.version }}/sql/diagrams/alter_zone_database.html %}
-</div>
-
 **alter_zone_range_stmt ::=**
 
 <div>
   {% include {{ page.version.version }}/sql/diagrams/alter_zone_range.html %}
 </div>
 
-**alter_zone_index_stmt ::=**
+**alter_zone_database_stmt ::=**
 
 <div>
-  {% include {{ page.version.version }}/sql/diagrams/alter_zone_index.html %}
+  {% include {{ page.version.version }}/sql/diagrams/alter_zone_database.html %}
 </div>
 
 **alter_zone_table_stmt ::=**
@@ -34,6 +28,11 @@ In CockroachDB, you can use **replication zones** to control the number and loca
   {% include {{ page.version.version }}/sql/diagrams/alter_zone_table.html %}
 </div>
 
+**alter_zone_index_stmt ::=**
+
+<div>
+  {% include {{ page.version.version }}/sql/diagrams/alter_zone_index.html %}
+</div>
 
 ## Required privileges
 
@@ -65,13 +64,32 @@ Currently, only the `root` user can configure replication zones.
 > ALTER TABLE t CONFIGURE ZONE USING range_min_bytes = 0, range_max_bytes = 90000, gc.ttlseconds = 89999, num_replicas = 4, constraints = '[-region=west]';
 ~~~
 
+~~~
+CONFIGURE ZONE 1
+~~~
+
 
 ### Reset a zone configuration
 
-DEFAULT
+{% include copy-clipboard.html %}
+~~~ sql
+> ALTER TABLE t CONFIGURE ZONE USING DEFAULT;
+~~~
+
+~~~
+CONFIGURE ZONE 1
+~~~
 
 ### Remove a zone configuration
 
+{% include copy-clipboard.html %}
+~~~ sql
+> ALTER TABLE t CONFIGURE ZONE DISCARD;
+~~~
+
+~~~
+CONFIGURE ZONE 1
+~~~
 
 ## See also
 

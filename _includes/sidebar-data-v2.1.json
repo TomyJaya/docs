@@ -306,6 +306,12 @@
             ]
           },
           {
+            "title": "Configure Replication Zones",
+            "urls": [
+              "/${VERSION}/configure-replication-zones.html"
+            ]
+          },
+          {
             "title": "Performance Benchmarking",
             "urls": [
               "/${VERSION}/performance-benchmarking-with-tpc-c.html"
@@ -1459,12 +1465,6 @@
             "title": "<code>cockroach user</code>",
             "urls": [
               "/${VERSION}/create-and-manage-users.html"
-            ]
-          },
-          {
-            "title": "<code>cockroach zone</code>",
-            "urls": [
-              "/${VERSION}/configure-replication-zones.html"
             ]
           },
           {
